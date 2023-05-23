@@ -15,20 +15,27 @@
         <button class="site-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <ul class="site-nav__list">
-          <li class="site-nav__item site-nav__item--active">
-            <a class="site-nav__link" href="index.html">Главная</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="gallery.html">Фото и видео</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="form.html">Форма отзыва</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="#">HTML Academy</a>
-          </li>
-        </ul>
+        <div class="site-nav__wrapper">
+          <ul class="site-nav__list">
+            <div class="site-nav__items-wrapper">
+              <li class="site-nav__item ">
+                <a class="site-nav__link site-nav__link--active" href="index.html">Главная</a>
+              </li>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="gallery.html">Фото и видео</a>
+              </li>
+            </div>
+            <div class="site-nav__items-wrapper">
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="form.html">Форма отзыва</a>
+              </li>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="#">HTML Academy</a>
+              </li>
+            </div>
+
+          </ul>
+        </div>
       </nav>
     </header>
     <main class="main-container">
@@ -49,23 +56,32 @@
               <p class="advantage__number advantage__number--wide">— №1 —</p>
               <p class="advantage__description advantage__description--wide description">СЕДОНА НЕ АТТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p>
             </div>
-            <img class="advantage__image" src="img/hotel.jpg" width="520" height="260" alt="Терраса отеля в Седоне.">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/hotel-tablet.jpg" width="512" height="256">
+              <img class="advantage__image" src="img/hotel-mobile.jpg" width="320" height="260" alt="Терраса отеля в Седоне.">
+            </picture>
           </li>
           <ul class="advantages__list advantages__list--additional">
             <li class="advantages__item advantage advantage--housing">
-              <h3 class="advantage__title title">Жилье</h3>
-              <p class="advantage__description description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+              <div class="advantage__text-container--additional">
+                <h3 class="advantage__title title">Жилье</h3>
+                <p class="advantage__description description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+              </div>
             </li>
             <li class="advantages__item advantage advantage--food">
-              <h3 class="advantage__title title">ЕДА</h3>
-              <p class="advantage__description description">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</p>
+              <div class="advantage__text-container--additional">
+                <h3 class="advantage__title title">ЕДА</h3>
+                <p class="advantage__description description">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</p>
+              </div>
             </li>
             <li class="advantages__item advantage advantage--gift">
-              <h3 class="advantage__title title">СУВЕНИРЫ</h3>
-              <p class="advantage__description description">Не только китайского, но и местного производства!</p>
+              <div class="advantage__text-container--additional">
+                <h3 class="advantage__title title">СУВЕНИРЫ</h3>
+                <p class="advantage__description description">Не только китайского, но и местного производства!</p>
+              </div>
             </li>
           </ul>
-          <li class="advantages__item advantage advantage--wide">
+          <li class="advantages__item advantage advantage--wide advantage--reversed">
             <div class="advantage__text-container">
               <h3 class="advantage__title advantage__title--wide title">ТАМ ЕСТЬ Мост дьявола</h3>
               <p class="advantage__number advantage__number--wide">— №2 —</p>
