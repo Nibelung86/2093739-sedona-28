@@ -42,7 +42,11 @@
       <h1 class="visually-hidden">Седона — туристический городок в штате Аризона.</h1>
       <section class="hero hero--main">
         <h2 class="visually-hidden">Добро пожаловать в Седону.</h2>
-        <img class="hero__slogan" src="img/welcome.svg" width="282" height="214" alt="Welcome to the gorgeous Sedona.">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/welcome-desktop.svg" width="800" height="256">
+          <source media="(min-width: 768px)" srcset="img/welcome-tablet.svg" width="512" height="256">
+          <img class="hero__slogan" src="img/welcome.svg" width="282" height="214" alt="Welcome to the gorgeous Sedona.">
+        </picture>
       </section>
       <section class="advantages">
         <header class="advantages__header section-header">
@@ -114,21 +118,20 @@
       </section>
       <!-- Поиск -->
       <section class="search">
-        <div class="search__container">
           <h2 class="search__title title">Заинтересовались?</h2>
           <p class="search__description description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
           <a class="search__link button" href="#">Найти гостиницу</a>
-        </div>
       </section>
       <!-- Карта -->
       <section class="map">
         <h2 class="visually-hidden">Седона на карте.</h2>
+        <iframe class="map__frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d104770.48128134226!2d-111.95103239655958!3d34.85427893916615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1681919835152!5m2!1sru!2sru" width="320" height="350" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Седона на карте.  "></iframe>
       </section>
     </main>
     <!-- Футер -->
     <footer class="main-footer">
       <div class="main-footer__container">
-        <p class="main-footer__hashtag title">#visitSEDONA</p>
+        <p class="main-footer__hashtag">#visitSEDONA</p>
         <div class="main-footer__social social">
           <ul class="social__list">
             <li class="social__item">
@@ -147,7 +150,7 @@
         </div>
         <div class="main-footer__copyright copyright">
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <p class="copyright__text">Разработано:</p>
+            Разработано
             <span class="visually-hidden">HTML Academy</span>
           </a>
         </div>

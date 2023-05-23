@@ -5,8 +5,12 @@
   &--wide {
     display: flex;
     flex-direction: column;
-    background-color: @blue;
-  }
+    background-color: @lightblue;
+    @media (min-width: @tablet-width) {
+        flex-direction: row;
+        grid-column: 1/-1;
+      }
+    }
 
   &--housing,
   &--food,
@@ -57,11 +61,6 @@
 }
 
 @media (min-width: @tablet-width) {
-  .advantage--wide {
-    flex-direction: row;
-    grid-column: 1/-1;
-  }
-
   .advantage--reversed {
     flex-direction: row-reverse;
   }

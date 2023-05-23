@@ -1,4 +1,5 @@
 .form__legend {
+  margin-bottom: 20px;
   font-size: 18px;
   font-weight: 700;
   line-height: 26px;
@@ -8,11 +9,56 @@
 
 .form__list {
   .list-style();
+
+  &--radio {
+    display: grid;
+
+    @media (min-width: @tablet-width) {
+      padding: 0 36px;
+      margin-bottom: 28px;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 16px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 0 53px;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 28px;
+    }
+  }
+
+  &--checkbox {
+    display: grid;
+  }
+}
+
+.form__item {
+  margin-bottom: 16px;
+}
+
+.form__fieldset {
+  margin: 0;
+  padding: 0 20px 39px;
+  border: none;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
 }
 
 .form__submit-wrapper {
   display: flex;
   flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.form__reference {
+  text-transform: uppercase;
+  color: rgba(51, 51, 51, 0.6);
 }
 
 @media (min-width: @tablet-width) {
@@ -22,8 +68,10 @@
   .form__submit-wrapper {
     grid-column: 1/-1;
   }
+}
 
-  .form__submit-wrapper {
-    flex-direction: row;
-  }
+@media (min-width: @desktop-width) {
+  .form__list--radio {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
 }

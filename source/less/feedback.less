@@ -3,12 +3,30 @@
   color: @black;
 }
 
+.feedback__header {
+  padding: 32px 18px 16px;
+}
+
 .feedback__form {
   display: grid;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 58px;
+    margin: 0 60px;
+  }
+}
+
+.feedback__title {
+  margin: 0 auto 24px;
+}
+
+.feedback__description {
+  color: @darkgrey;
 }
 
 @media (min-width: @tablet-width) {
-  .feedback__form {
-    grid-template-columns: 1fr 1fr;
+  .feedback__title {
+    font-size: 30px;
   }
 }
