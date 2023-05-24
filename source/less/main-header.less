@@ -1,7 +1,7 @@
 .main-header {
+  min-height: 56px;
   display: flex;
   flex-direction: column;
-  min-height: 56px;
 }
 
 .main-header__logo {
@@ -17,10 +17,8 @@
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-}
 
-@media (min-width: @tablet-width) {
-  .main-header__logo {
+  @media (min-width: @tablet-width) {
     z-index: 4;
   }
 }
